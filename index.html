@@ -397,35 +397,74 @@ footer i {
     margin-top: 500px;
 }
 
+/* Sound Button Styling */
+.sound-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: background 0.3s ease;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .sound-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
 </style>
 </head>
 <body>
 
   <!-- Video Background -->
   <div class="video-container">
-    <video autoplay loop muted>
+    <video id="background-video" autoplay loop muted>
       <source src="https://cdn.mt.gov.sa/mtportal/mt-fe-production/resources/videos/home/mt-home-video-102024-1.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
+
+  
+<!-- Sound Button -->
+<div id="sound-button" class="sound-button">🔇</div>
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script>
-    // Unmute the video once it starts playing    
-    document.getElementById('background-video').onplay = function() {
-      this.muted = false;
-    };
+    document.addEventListener('DOMContentLoaded', function() {
+      const video = document.getElementById('background-video');
+      const soundButton = document.getElementById('sound-button');
 
+    // When the play button is clicked, unmute and play the video
+    soundButton.addEventListener('click', function() {
+      if (video.muted) {
+        video.muted = false;
+        soundButton.textContent = '🔊'; // Change icon to sound on
+      } else {
+        video.muted = true;
+        soundButton.textContent = '🔇'; // Change icon to sound off
+      }
+  });
+});
   </script>
   <!-- Navigation -->
   <header class="p-3 mb-3 border-bottom navbar-dark">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">        
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <div class="navbar-brand">
-            <a class="navbar-brand" href="#">
-              <img src="https://files.oaiusercontent.com/file-US8fR1dPZJF3zQpAYfQMTR?se=2025-02-06T17%3A48%3A17Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D092748df-ada1-4792-995e-eb55dbe934c5.webp&sig=HR62YnB/2cyqbKIG/jS9svR%2Brj0ZHo8h5OoEnSHQKo4%3D" alt="Logo" style="width:65px;" class="rounded-pill", >
-            </a>     
-      </div>
+
+            <li><a  href="#">
+              <img src="image_cropped.png"  alt="Logo" style="width:65px;"  >
+            </a>  </li>
             <li><a href="#food" class="nav-link px-2 ">Food</a> </li>
             <li><a href="#games" class="nav-link px-2 ">Games</a> </li>
             <li><a href="#jewelry" class="nav-link px-2 ">Jewellery</a> </li>
