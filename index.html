@@ -306,22 +306,10 @@
             opacity: 0.7;
         }
         .fa-instagram {
-         background: #ffffff;
+         background: #006747;
          color: white;
         }
 
-    /* Table Styling */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    table td {
-      padding: 12px;
-      border-bottom: 1px solid #ddd;
-    }
 
     /* Footer Section */
     footer {
@@ -337,7 +325,7 @@
       font-size: 1rem;
     }
     footer {
-  background-color: #104f0b;
+  background-color: #006747;
   color: white;
   text-align: center;
   padding: 10px;
@@ -360,16 +348,6 @@ footer i {
   font-size: 24px;
   margin-right: 8px;
 }
-.social-icons a {
-        text-decoration: none;
-        color: #3b5998; /* Facebook's official blue color */
-        margin: 0 10px;
-        font-size: 24px;
-    }
-    
-    .social-icons a:hover {
-        color: #2d4373; /* A darker shade of Facebook's blue for hover */
-    }
 
 
     /* Responsive Design */
@@ -412,14 +390,20 @@ footer i {
     cursor: pointer;
     z-index: 100;
     transition: background 0.3s ease;
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-  }
+    font-size: 30px; /* Increase size for visibility */
+    color: white; /* White color */
+    border: 2px solid white;
+}
 
-  .sound-button:hover {
+.sound-button:hover {
     background-color: rgba(255, 255, 255, 1);
-  }
+}
+
+/* When muted, show strikethrough effect */
+.sound-button.muted {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 
 </style>
 </head>
@@ -582,36 +566,36 @@ footer i {
       </div>
     </section>
   </section>
-  <section id="contact">
-    <div class="container-fluid bla">
+  <footer >
+    <div class="container-fluid ">
        <br><br>
        <div class="row">
           <div class="col">
-             
-             </p><p><i class="fab fa-facebook-square" style="font-size:48px;color:rgb(24, 202, 21)"></i>   <i class="fab fa-instagram" style="font-size:48px;color:rgb(83, 184, 21)"></i>   <i class="fab fa-twitter" style="font-size:48px;color:rgb(40, 206, 22)"></i></p>
+             <h4>FOLLOW US</h4>
+             <br>
+             </p><p><i class="fab fa-facebook-square" style="font-size:48px;color:#ffffff"></i>   <i class="fab fa-instagram" style="font-size:48px;color:#ffffff"></i>   <i class="fab fa-twitter" style="font-size:48px;color:#ffffff"></i></p>
           </div>
       
           <div class="col">
              <h5>HELP</h5>
-             <br>
              <p>FAQ</p>
-             <p>Contact caind gain</p>
+             <p>Contact us</p>
              <p>Terms and conditions</p>
              <p>Privacy policy</p>
           </div>
           <div class="col">
              <h5>HAVE A QUESTION</h5>
-             <br>
-             <p><i class="fas fa-map-marker-alt" style="font-size:36px;color:rgb(26, 11, 11)"></i>                 BigAcademy</p>
-             <p><i class="fas fa-phone-volume" style="font-size:36px;color:rgb(12, 8, 8)"></i>    0550427386</p>
-             <p><i class="fas fa-envelope" style="font-size:36px;color:rgb(15, 10, 10)"></i>    aisha.siddiqua@bigacademy.com</p>
+             <p><i class="fas fa-map-marker-alt" style="font-size:25px;color:#ffffff"></i>BigAcademy</p>
+             <p><i class="fas fa-phone-volume" style="font-size:25px;color:#ffffff"></i>0500425386</p>
+             <p><i class="fas fa-envelope" style="font-size:25px;color:#ffffff"></i>saudi.isd@bigacademy.com</p>
           </div>
        </div>
+       <br>
        <p style="text-align:center">Advertise on saudiarabiastall.com | Terms of use | Privacy policy | Feedback | Report an issue | Partners | Sitemap | FAQ<br>
         2025 Saudi Arabia Stall | All Rights Reserved
        </p>
     </div>
- </section>
+  </footer>
 
 </body>
 </html>
